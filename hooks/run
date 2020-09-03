@@ -1,0 +1,6 @@
+#!{{pkgPathFor "core/busybox-static"}}/bin/bash
+
+export JAVA_OPTS="`cat {{pkg.svc_config_path}}/javaOpts.txt | tr '\n' ' '`"
+export JAVA_PARAMS="`cat {{pkg.svc_config_path}}/javaParams.txt | tr '\n' ' '`"
+
+eval "`echo java $JAVA_OPTS "$JAVA_PARAMS" -jar {{pkg.path}}/application.jar -c {{pkg.path}}index.data`"

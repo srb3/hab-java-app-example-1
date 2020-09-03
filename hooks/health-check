@@ -1,0 +1,13 @@
+#!{{pkgPathFor "core/busybox-static"}}/bin/bash
+
+CHECK_ADDR="{{sys.ip}}:{{cfg.server.port}}"
+raw_data="$(curl --silent ${CHECK_ADDR}/isAlive)"
+
+case $raw_data in
+  "1")
+    rc=0 ;;
+  *) 
+    echo "Health check failed, check the logs for failure summary of the /isAlive endpoint failures"
+    rc=2 ;;
+esac
+exit $rc

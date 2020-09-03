@@ -1,0 +1,5 @@
+-D'logging.level.com.app={{cfg.logging.level}}'
+-D'spring.profiles.active={{cfg.spring.profile}}'
+-D'files.base-folder={{pkg.svc_data_path}}'
+-D'server.port={{cfg.server.port}}'
+-D'spring.mail.host={{cfg.spring.mail_host}}'

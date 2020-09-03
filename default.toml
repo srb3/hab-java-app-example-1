@@ -1,0 +1,13 @@
+[logging]
+level = "INFO"
+
+[spring]
+profile = "hosted"
+mail_host = "mail.prod.com"
+
+[jvm]
+xms = "64m"
+xmx = "512m"
+
+[server]
+port = 8080

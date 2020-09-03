@@ -1,0 +1,2 @@
+export MYVIMRC="/src/.vimrc"
+export VIMINIT='source $MYVIMRC'
