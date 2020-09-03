@@ -58,6 +58,6 @@ do_build() {
 # this allows them to be packaged up into the hab package
 # and gives them a usable handle in the run hook.
 do_install() {
-  mv ${ext_postgis_cache_path} ${pkg_prefix}/index.data
+  mv ${ext_index_cache_path} ${pkg_prefix}/index.data
   mv $HAB_CACHE_SRC_PATH/${pkg_name}-${pkg_version}.jar ${pkg_prefix}/application.jar
 }
